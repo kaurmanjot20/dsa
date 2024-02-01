@@ -1,0 +1,39 @@
+
+/*  BRUTE */
+class Solution {
+  public:
+    string armstrongNumber(int n){
+        int ognum = n;
+        int count=0,sum=0,rem,rem1;
+        while(n>0){                    //no need to count digits
+            rem = n % 10;
+            n = n/10;
+            count++;
+        }
+        n = ognum;
+        while(n>0){
+            rem = n%10;
+            sum = sum + pow(rem,3);
+            n = n/10;
+        }
+        if(sum == ognum){               // use ternary operator if possible
+            return "Yes";
+        }else{
+            return "No";
+        }
+    }
+};
+
+/*  OPTIMISED */
+class Solution {
+  public:
+    string armstrongNumber(int n){
+        int ognum = n;
+        int sum=0,rem;
+        while(n>0){
+            sum = sum + pow(n%10,3);
+            n = n/10;
+        }
+        return (sum==ognum)?"Yes":"No";
+    }
+};
