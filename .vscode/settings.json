@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "armstrong num": "cpp"
+        "armstrong num": "cpp",
+        "iostream": "cpp"
     }
 }
