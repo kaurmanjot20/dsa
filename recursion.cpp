@@ -18,7 +18,7 @@ int main(){
 }
 */
 /*
-// PRINT LINEARLY FORM 1-N -- BACKTRACKING
+// PRINT LINEARLY FROM 1-N -- BACKTRACKING
 void f1(int i, int N){
     if(i < 1) return;
     f1(i-1, N);
@@ -93,16 +93,3 @@ int main(){
     cout << f(n);
 }
 //*****************************************
-/*
-// FACTORIAL OF A NUMBER
-int f(int n){
-    if(n==0) return 1;
-    return n*f(n-1);
-}
-int main(){
-    int n;
-    cout << "Enter a number ";
-    cin >> n;
-    cout << f(n);
-}
-*/
