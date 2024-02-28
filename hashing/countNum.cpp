@@ -6,7 +6,7 @@ int main(){
     int hash[12]={0};
     
     //pre-calculate
-    for(int i=0;i<sizeof(a);i++){
+    for(int i=0;i<sizeof(a)/sizeof(a[0]);i++){
         hash[a[i]]+=1;
     }
 
@@ -18,7 +18,7 @@ int main(){
     int num;
     while (q--){
         cin >> num;
-        cout << hash[num];
+        cout << hash[num] << endl;
     }
      
 
