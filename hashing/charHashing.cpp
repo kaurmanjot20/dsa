@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
+/*
+//assumption : string has all lowercase char
 int main(){
     string s;
     cout << "Enter a string";
@@ -20,6 +22,31 @@ int main(){
         cin >> c;
         //fetch
         cout << hash[c - 'a'] << endl;
+    }
+    return 0;
+}
+*/
+
+//no assumption; consider all 256 elements
+int main(){
+    string s;
+    cout << "Enter a string";
+    cin >> s;
+
+    int hash[256] = {0};
+    for(int i=0; i<s.size();i++){
+        hash[s[i]]++;
+    }
+
+    int q;
+    cout << "Enter no. of queries ";
+    cin >> q;
+    while(q--){
+        char c;
+        cout << "Enter query char " << endl;
+        cin >> c;
+        //fetch
+        cout << "Appears " << hash[c] << " times" << endl;
     }
     return 0;
 }
