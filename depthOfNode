@@ -1,0 +1,61 @@
+class Node {
+    int value;
+    Node left, right;
+
+    Node(int value) {
+        this.value = value;
+        left = right = null;
+    }
+}
+
+class BinarySearchTree {
+    Node root;
+
+    // Method to find the depth of a node
+    int findDepth(Node root, int key, int depth) {
+        // Base case: if the tree is empty or key is not found
+        if (root == null) {
+            return -1; // Key not found
+        }
+
+        // If the current node matches the key
+        if (root.value == key) {
+            return depth;
+        }
+
+        // If the key is smaller, traverse the left subtree
+        if (key < root.value) {
+            return findDepth(root.left, key, depth + 1);
+        }
+
+        // If the key is larger, traverse the right subtree
+        return findDepth(root.right, key, depth + 1);
+    }
+
+    // Wrapper method
+    int getDepth(int key) {
+        return findDepth(root, key, 0);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        BinarySearchTree bst = new BinarySearchTree();
+        bst.root = new Node(10);
+        bst.root.left = new Node(5);
+        bst.root.right = new Node(15);
+        bst.root.left.left = new Node(2);
+        bst.root.left.right = new Node(7);
+        bst.root.right.left = new Node(12);
+        bst.root.right.right = new Node(18);
+
+        int key = 7;
+        int depth = bst.getDepth(key);
+
+        if (depth != -1) {
+            System.out.println("The depth of node " + key + " is: " + depth);
+        } else {
+            System.out.println("Node " + key + " is not found in the BST.");
+        }
+    }
+}
