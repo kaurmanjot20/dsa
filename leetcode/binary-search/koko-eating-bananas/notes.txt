@@ -1,0 +1,7 @@
+Binary Search on array of size n → O(log n)
+Binary Search on answer range [1, m] → O(log m)
+
+Koko is the second case: we're binary-searching the answer (speed) between 1 and max(piles)
+
+Time Complexity: O(n log(max(piles)))
+Space Complexity: O(1)

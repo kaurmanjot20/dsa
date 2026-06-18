@@ -1,0 +1,5 @@
+Time Complexity: O(n) 
+because we traverse the array exactly once, maintaining the minimum buying price seen so far and calculating the profit for each selling day.
+
+Space Complexity: O(1) 
+because only a constant amount of extra memory is used regardless of the input size.
