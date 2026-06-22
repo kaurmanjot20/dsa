@@ -1,24 +1,33 @@
-Given the root of a binary tree, return the length of the diameter of the tree.
+[543\. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 
-The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+Solved
 
-The length of a path between two nodes is represented by the number of edges between them.
+Easy
 
- 
+Topics
 
-Example 1:
+![premium lock icon](https://leetcode.com/_next/static/images/lock-a6627e2c7fa0ce8bc117c109fb4e567d.svg)Companies
 
+Given the `root` of a binary tree, return _the length of the **diameter** of the tree_.
 
-Input: root = [1,2,3,4,5]
-Output: 3
-Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
-Example 2:
+The **diameter** of a binary tree is the **length** of the longest path between any two nodes in a tree. This path may or may not pass through the `root`.
 
-Input: root = [1,2]
-Output: 1
- 
+The **length** of a path between two nodes is represented by the number of edges between them.
 
-Constraints:
+**Example 1:**
 
-The number of nodes in the tree is in the range [1, 104].
--100 <= Node.val <= 100
+![](https://assets.leetcode.com/uploads/2021/03/06/diamtree.jpg)
+
+**Input:** root = \[1,2,3,4,5\]
+**Output:** 3
+**Explanation:** 3 is the length of the path \[4,2,1,3\] or \[5,2,1,3\].
+
+**Example 2:**
+
+**Input:** root = \[1,2\]
+**Output:** 1
+
+**Constraints:**
+
+-   The number of nodes in the tree is in the range `[1, 104]`.
+-   `-100 <= Node.val <= 100`
